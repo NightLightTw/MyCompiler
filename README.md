@@ -28,3 +28,20 @@ A simple C compiler.
 3. 5/12第一次測試 (PM 8:00線上討論測試)
 4. 5/19第二次測試加最後確認(PM 8:00線上討論測試)
 5. 5/20、5/21做ppt和word
+
+## Implementation
+### Requirement
+```
+sudo apt-get install flex bison
+```
+
+### Commands
+```
+lex lexer.l
+yacc -d parser.y
+cc lex.yy.c y.tab.c
+./a.out < input1.c
+```
+
+For more information, please visit [here](./c-compiler/README.md).
+
