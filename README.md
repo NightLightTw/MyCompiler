@@ -6,7 +6,7 @@ A simple C compiler.
 - 平台: ubuntu、github協作做版本管理，保證流程正確、保存編輯紀錄
 - 工具: LLVM、Flex、Bison
 - 語言: c++編譯器
-- 目標: 完整性>速度>額外擴充 (可參考 https://github.com/AnjaneyaTripathi/c-compiler)
+- 目標: 完整性>速度>額外擴充 (可參考 https://github.com/AnjaneyaTripathi/c-compiler, https://medium.com/@zetavg/%E7%B7%A8%E8%AD%AF%E5%99%A8-llvm-%E6%B7%BA%E6%B7%BA%E7%8E%A9-42a58c7a7309#1000)
 ## 分工
 ### 凱毅: 
 詞法分析器(Lexer)和語法分析器(Parser) 工具：Yacc、Lex/FLex、Bison
@@ -29,7 +29,7 @@ A simple C compiler.
 4. 5/19第二次測試加最後確認(PM 8:00線上討論測試)
 5. 5/20、5/21做ppt和word
 
-## Implementation
+## Implementation (LEX + YACC)
 ### Requirement
 ```
 sudo apt-get install flex bison
@@ -45,3 +45,22 @@ cc lex.yy.c y.tab.c
 
 For more information, please visit [here](./c-compiler/README.md).
 
+## Implementation (LLVM + CLANG)
+### Requirement
+```
+sudo apt-get install clang llvm
+```
+
+### Commands
+```
+clang -S -emit-llvm -Xclang -disable-O0-optnone input4.c
+opt -S -mem2reg input4.ll -o input4_opt.ll
+llc input4.ll -o input4_llvm.s
+llc input4_opt.ll -o input4_opt_llvm.s
+gcc -S input4.c -o input_gcc.s
+```
+
+For more information, please visit below links: 
+* [LLVM-Clang编译器安装和使用](https://blog.csdn.net/rikeyone/article/details/100020145)
+* [編譯器 LLVM 淺淺玩](https://medium.com/@zetavg/%E7%B7%A8%E8%AD%AF%E5%99%A8-llvm-%E6%B7%BA%E6%B7%BA%E7%8E%A9-42a58c7a7309)
+* [LLVM opt mem2reg has no effect](https://stackoverflow.com/questions/46513801/llvm-opt-mem2reg-has-no-effect)

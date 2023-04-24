@@ -4,3 +4,6 @@ y.output
 y.tab.h
 lex.yy.c
 a.out
+*.s
+input4*
+!input4.c
