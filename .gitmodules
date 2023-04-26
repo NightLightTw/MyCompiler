@@ -1,0 +1,3 @@
+[submodule "c-compiler"]
+	path = c-compiler
+	url = https://github.com/AnjaneyaTripathi/c-compiler.git
