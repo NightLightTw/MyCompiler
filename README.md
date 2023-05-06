@@ -53,11 +53,26 @@ sudo apt-get install clang llvm
 
 ### Commands
 ```
+# GCC 
+gcc -S input4.c -o input_gcc.s
+gcc -c input4_llvm.s -o input4_llvm_gcc.o
+gcc input4_llvm_gcc.o -o input4_llvm_gcc
+
+# generate .ll file
 clang -S -emit-llvm -Xclang -disable-O0-optnone input4.c
+
+# optimization
 opt -S -mem2reg input4.ll -o input4_opt.ll
+
+# generate assembly file
 llc input4.ll -o input4_llvm.s
 llc input4_opt.ll -o input4_opt_llvm.s
-gcc -S input4.c -o input_gcc.s
+
+# generate object file
+as --64 -o input4_llvm_as.o input4_llvm.s
+
+# generate executable file
+ld -m elf_x86_64 -e main -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o input4_llvm_as input4_llvm_as.o -lc
 ```
 
 For more information, please visit below links: 
