@@ -43,7 +43,7 @@ cc lex.yy.c y.tab.c
 ./a.out < input1.c
 ```
 
-For more information, please visit [here](./c-compiler/README.md).
+For more information, please visit [here](https://github.com/AnjaneyaTripathi/c-compiler/blob/a1818231840cea321e701957ff0a0dfa2472a159/README.md).
 
 ## Implementation (LLVM + CLANG)
 ### Requirement
