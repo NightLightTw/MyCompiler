@@ -53,14 +53,37 @@ sudo apt-get install clang llvm
 
 ### Commands
 ```
+# GCC 
+gcc -S input4.c -o input_gcc.s
+gcc -c input4_llvm.s -o input4_llvm_gcc.o
+gcc input4_llvm_gcc.o -o input4_llvm_gcc
+
+# generate .ll file
 clang -S -emit-llvm -Xclang -disable-O0-optnone input4.c
+
+# optimization
 opt -S -mem2reg input4.ll -o input4_opt.ll
+
+# generate assembly file
 llc input4.ll -o input4_llvm.s
 llc input4_opt.ll -o input4_opt_llvm.s
-gcc -S input4.c -o input_gcc.s
+
+# generate object file
+as --64 -o input4_llvm_as.o input4_llvm.s
+
+# generate executable file
+# -dynamic-linker: dynamic linker shared library
+# -lc: link with C standard library (libc.so)
+ld input4_llvm_as.o -o input4_llvm_as -dynamic-linker /lib64/ld-linux-x86-64.so.2 -lc # cannot find entry symbol
+ld input4_llvm_as.o -o input4_llvm_as -dynamic-linker /lib64/ld-linux-x86-64.so.2 -lc -e main # Segmentation fault (core dumped)
+
+# generate start object file (call main() and exit() system call)
+as --64 start.s -o start.o
+ld start.o input4_llvm_as.o -o input4_llvm_as -dynamic-linker /lib64/ld-linux-x86-64.so.2 -lc
 ```
 
 For more information, please visit below links: 
 * [LLVM-Clang编译器安装和使用](https://blog.csdn.net/rikeyone/article/details/100020145)
 * [編譯器 LLVM 淺淺玩](https://medium.com/@zetavg/%E7%B7%A8%E8%AD%AF%E5%99%A8-llvm-%E6%B7%BA%E6%B7%BA%E7%8E%A9-42a58c7a7309)
 * [LLVM opt mem2reg has no effect](https://stackoverflow.com/questions/46513801/llvm-opt-mem2reg-has-no-effect)
+* [Segmentation fault (core dumped)](https://stackoverflow.com/questions/6608957/using-dynamic-linker-with-a-linker-script)

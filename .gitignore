@@ -7,3 +7,4 @@ a.out
 *.s
 input4*
 !input4.c
+!start.s
