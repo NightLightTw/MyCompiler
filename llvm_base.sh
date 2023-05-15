@@ -13,7 +13,7 @@ base_name=$(basename "$input_file" .c)
 clang -S -emit-llvm -Xclang -disable-O0-optnone "$input_file"
 
 # Perform optimization
-opt -S -mem2reg "${base_name}.ll" -o "${base_name}_opt.ll"
+opt -S "${base_name}.ll" -o "${base_name}_opt.ll"
 
 # Generate assembly file
 llc "${base_name}_opt.ll" -o "${base_name}_opt_llvm.s"
