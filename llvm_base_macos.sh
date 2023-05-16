@@ -19,9 +19,10 @@ opt -S "${base_name}.ll" -o "${base_name}_opt.ll"
 llc "${base_name}_opt.ll" -o "${base_name}_opt_llvm.s"
 
 # Generate object files
-as --64 -o "${base_name}_opt_llvm_as.o" "${base_name}_opt_llvm.s"
-as --64 start.s -o start.o
-ld start.o "${base_name}_opt_llvm_as.o" -o "${base_name}_opt_llvm_as" -dynamic-linker /lib64/ld-linux-x86-64.so.2 -lc
+as -o "${base_name}_opt_llvm_as.o" "${base_name}_opt_llvm.s"
+
+# Link object files(ld->clang)
+clang -o "${base_name}_opt_llvm_as" "${base_name}_opt_llvm_as.o"
 
 # Run the output
 ./"${base_name}_opt_llvm_as"
