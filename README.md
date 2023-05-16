@@ -369,6 +369,12 @@ int main() {
 }
 
 ```
+## 可視化
+### linux測試結果
+![](https://hackmd.io/_uploads/HyFD0perh.png)
+
+### MacOS測試結果
+![](https://hackmd.io/_uploads/HyVuRplHh.png)
 
 For more information, please visit below links: 
 * [LLVM-Clang编译器安装和使用](https://blog.csdn.net/rikeyone/article/details/100020145)
