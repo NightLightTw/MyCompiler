@@ -5,8 +5,8 @@ A simple C compiler.
 
 - 平台: ubuntu、github協作做版本管理，保證流程正確、保存編輯紀錄
 - 工具: LLVM、Flex、Bison
-- 語言: c++編譯器
-- 目標: 完整性>速度>額外擴充 (可參考 https://github.com/AnjaneyaTripathi/c-compiler, https://medium.com/@zetavg/%E7%B7%A8%E8%AD%AF%E5%99%A8-llvm-%E6%B7%BA%E6%B7%BA%E7%8E%A9-42a58c7a7309#1000)
+- 語言: c編譯器
+- 目標: 完整性>速度>跨平台 (可參考 https://github.com/AnjaneyaTripathi/c-compiler, https://medium.com/@zetavg/%E7%B7%A8%E8%AD%AF%E5%99%A8-llvm-%E6%B7%BA%E6%B7%BA%E7%8E%A9-42a58c7a7309#1000)
 ## 分工
 ### 凱毅: 
 詞法分析器(Lexer)和語法分析器(Parser) 工具：Yacc、Lex/FLex、Bison
