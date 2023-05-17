@@ -371,10 +371,10 @@ int main() {
 ```
 ## 可視化
 ### linux測試結果
-![](https://hackmd.io/_uploads/HyFD0perh.png)
+![image](https://github.com/NightLightTw/MyCompiler/assets/78789817/eceae149-27ec-45d6-ab2f-46e9d5eb59d6)
 
 ### MacOS測試結果
-![](https://hackmd.io/_uploads/HyVuRplHh.png)
+![image](https://github.com/NightLightTw/MyCompiler/assets/78789817/a9ef2c04-8dde-4117-94b0-139a86cdfd25)
 
 For more information, please visit below links: 
 * [LLVM-Clang编译器安装和使用](https://blog.csdn.net/rikeyone/article/details/100020145)
