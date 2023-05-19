@@ -61,7 +61,7 @@ sudo apt-get install clang llvm
 ```
 # GCC 
 gcc -S input4.c -o input_gcc.s
-gcc -c input4_llvm.s -o input4_llvm_gcc.o
+gcc -c input4_gcc.s -o input4_llvm_gcc.o
 gcc input4_llvm_gcc.o -o input4_llvm_gcc
 ```
 ## Implementation 3 (CLANG + LLVM)
