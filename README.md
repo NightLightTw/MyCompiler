@@ -5,8 +5,8 @@ A simple C compiler.
 
 - 平台: ubuntu、github協作做版本管理，保證流程正確、保存編輯紀錄
 - 工具: LLVM、Flex、Bison
-- 語言: c++編譯器
-- 目標: 完整性>速度>額外擴充 (可參考 https://github.com/AnjaneyaTripathi/c-compiler, https://medium.com/@zetavg/%E7%B7%A8%E8%AD%AF%E5%99%A8-llvm-%E6%B7%BA%E6%B7%BA%E7%8E%A9-42a58c7a7309#1000)
+- 語言: c編譯器
+- 目標: 完整性>速度>跨平台 (可參考 https://github.com/AnjaneyaTripathi/c-compiler, https://medium.com/@zetavg/%E7%B7%A8%E8%AD%AF%E5%99%A8-llvm-%E6%B7%BA%E6%B7%BA%E7%8E%A9-42a58c7a7309#1000)
 ## 分工
 ### 凱毅: 
 詞法分析器(Lexer)和語法分析器(Parser) 工具：Yacc、Lex/FLex、Bison
@@ -30,6 +30,9 @@ A simple C compiler.
 5. 5/20、5/21做ppt和word
 
 ## Implementation 1 (LEX + YACC)
+### 架構
+<img width="689" alt="截圖 2023-05-12 下午10 29 26" src="https://github.com/NightLightTw/MyCompiler/assets/78789817/d430defe-a03a-4530-a415-896a39b6aa1d">
+
 ### Requirement
 ```
 sudo apt-get install flex bison
@@ -47,7 +50,7 @@ For more information, please visit [here](https://github.com/AnjaneyaTripathi/c-
 
 ## Implementation 2 (GCC + LLVM)
 ### 架構
-![](https://hackmd.io/_uploads/H13-QP1rh.png)
+![llvm架構](https://github.com/NightLightTw/MyCompiler/assets/78789817/a94770d7-c21f-4bfc-975a-e94db2c71ed2)
 
 ### Requirement
 ```
@@ -63,6 +66,8 @@ gcc input4_llvm_gcc.o -o input4_llvm_gcc
 ```
 ## Implementation 3 (CLANG + LLVM)
 ### 架構
+<img width="1016" alt="截圖 2023-05-12 下午10 29 38" src="https://github.com/NightLightTw/MyCompiler/assets/78789817/4ee08ed8-f712-440c-8013-a0a94ce3b4bf">
+
 
 ### Requirement
 ```
@@ -369,6 +374,12 @@ int main() {
 }
 
 ```
+## 可視化
+### linux測試結果
+![image](https://github.com/NightLightTw/MyCompiler/assets/78789817/eceae149-27ec-45d6-ab2f-46e9d5eb59d6)
+
+### MacOS測試結果
+![image](https://github.com/NightLightTw/MyCompiler/assets/78789817/a9ef2c04-8dde-4117-94b0-139a86cdfd25)
 
 For more information, please visit below links: 
 * [LLVM-Clang编译器安装和使用](https://blog.csdn.net/rikeyone/article/details/100020145)
