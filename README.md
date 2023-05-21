@@ -386,3 +386,9 @@ For more information, please visit below links:
 * [編譯器 LLVM 淺淺玩](https://medium.com/@zetavg/%E7%B7%A8%E8%AD%AF%E5%99%A8-llvm-%E6%B7%BA%E6%B7%BA%E7%8E%A9-42a58c7a7309)
 * [LLVM opt mem2reg has no effect](https://stackoverflow.com/questions/46513801/llvm-opt-mem2reg-has-no-effect)
 * [Segmentation fault (core dumped)](https://stackoverflow.com/questions/6608957/using-dynamic-linker-with-a-linker-script)
+* [ANSI C grammar](https://www.quut.com/c/ANSI-C-grammar-l-2011.html)
+
+Debug
+For Ubuntu 22.04 user which meet error with `cc lex.yy.c y.tab.c`
+* [How to switch between multiple GCC and G++ compiler versions on Ubuntu 22.04 LTS Jammy Jellyfish](https://linuxconfig.org/how-to-switch-between-multiple-gcc-and-g-compiler-versions-on-ubuntu-22-04-lts-jammy-jellyfish)
+
