@@ -31,7 +31,7 @@ A simple C compiler.
 
 ## Implementation 1 (LEX + YACC)
 ### 架構
-<img width="689" alt="截圖 2023-05-12 下午10 29 26" src="https://github.com/NightLightTw/MyCompiler/assets/78789817/d430defe-a03a-4530-a415-896a39b6aa1d">
+<img width="689" alt="截圖 2023-05-12 下午10 29 26" src="https://github.com/NightLightTw/MyCompiler/assets/78789817/05fc589b-27e9-4f07-9253-d8b5a5c5cc9c">
 
 ### Requirement
 ```
@@ -50,7 +50,7 @@ For more information, please visit [here](https://github.com/AnjaneyaTripathi/c-
 
 ## Implementation 2 (GCC + LLVM)
 ### 架構
-![llvm架構](https://github.com/NightLightTw/MyCompiler/assets/78789817/a94770d7-c21f-4bfc-975a-e94db2c71ed2)
+![llvm架構](https://github.com/NightLightTw/MyCompiler/assets/78789817/4c6edebc-7be5-489d-9347-74fe04b73f20)
 
 ### Requirement
 ```
@@ -66,7 +66,7 @@ gcc input4_llvm_gcc.o -o input4_llvm_gcc
 ```
 ## Implementation 3 (CLANG + LLVM)
 ### 架構
-<img width="1016" alt="截圖 2023-05-12 下午10 29 38" src="https://github.com/NightLightTw/MyCompiler/assets/78789817/4ee08ed8-f712-440c-8013-a0a94ce3b4bf">
+<img width="1016" alt="截圖 2023-05-12 下午10 29 38" src="https://github.com/NightLightTw/MyCompiler/assets/78789817/c689c797-bb46-4aa4-ab59-c7aabedbbafb">
 
 
 ### Requirement
@@ -376,10 +376,10 @@ int main() {
 ```
 ## 可視化
 ### linux測試結果
-![image](https://github.com/NightLightTw/MyCompiler/assets/78789817/eceae149-27ec-45d6-ab2f-46e9d5eb59d6)
+![linux](https://github.com/NightLightTw/MyCompiler/assets/78789817/69120479-4e86-488f-a260-6ac62ee425f2)
 
 ### MacOS測試結果
-![image](https://github.com/NightLightTw/MyCompiler/assets/78789817/a9ef2c04-8dde-4117-94b0-139a86cdfd25)
+![macos](https://github.com/NightLightTw/MyCompiler/assets/78789817/2efd8ce5-78ff-4ba2-b179-3d8afc3d28f8)
 
 For more information, please visit below links: 
 * [LLVM-Clang编译器安装和使用](https://blog.csdn.net/rikeyone/article/details/100020145)
